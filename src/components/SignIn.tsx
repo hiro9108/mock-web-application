@@ -86,6 +86,17 @@ export default function SignIn() {
                     >
                         Sign In
                     </Button>
+                    <Link to='/secret'>
+                        <Button
+                            type="button"
+                            fullWidth
+                            variant="contained"
+                            color="primary"
+                            className={classes.submit}
+                        >
+                            Test User
+                        </Button>
+                    </Link>
                     <Grid container>
                         <Grid item xs>
                             <Link to="/">
