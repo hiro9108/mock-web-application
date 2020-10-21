@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
+import LocationCityIcon from '@material-ui/icons/LocationCity';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -14,7 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 // import Link from '@material-ui/core/Link';
-import Copyright from './Copyright';
+import Copyright from './UI/Copyright';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -47,6 +47,18 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.paper,
         padding: theme.spacing(6),
     },
+    appBar: {
+        borderBottom: `1px solid ${theme.palette.divider}`,
+    },
+    toolbar: {
+        flexWrap: 'wrap',
+    },
+    toolbarTitle: {
+        flexGrow: 1,
+    },
+    link: {
+        margin: theme.spacing(1, 1.5),
+    },
 }));
 
 const cards = [1, 2, 3, 4, 5, 6];
@@ -58,12 +70,24 @@ export default function Album() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <AppBar position="relative">
-                <Toolbar>
-                    <CameraIcon className={classes.icon} />
-                    <Typography variant="h6" color="inherit" noWrap>
-                        Menu
-                    </Typography>
+            <AppBar position="static" elevation={0} className={classes.appBar}>
+                <Toolbar className={classes.toolbar}>
+                <LocationCityIcon className={classes.icon} />
+                <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+                    Education
+                </Typography>
+                <nav>
+                    <Link color="textPrimary" to="/signIn" className={classes.link} style={{ textDecoration: 'none', color: 'white'}}>
+                        <Button variant="contained" color="primary">
+                            Sign In
+                        </Button>
+                    </Link>
+                    <Link color="textPrimary" to="/signUp" className={classes.link} style={{ textDecoration: 'none', color: 'white'}}>
+                        <Button variant="contained" color="primary">
+                            Sign Up
+                        </Button>
+                    </Link>
+                </nav>
                 </Toolbar>
             </AppBar>
             <main>
@@ -81,7 +105,7 @@ export default function Album() {
                         <div className={classes.heroButtons}>
                             <Grid container spacing={2} justify="center">
                                 <Grid item>
-                                    <Link to='/signIn'>
+                                    <Link to='#' style={{ textDecoration: 'none' }}>
                                         <Button variant="contained" color="primary">
                                             Nodejs App
                                         </Button>
