@@ -6,6 +6,7 @@ import SignUp from './components/SignUp';
 import Secret from './components/Secret';
 
 import AppPage from './components/AppPage';
+import Chatbot from './containers/Chatbot/Chatbot';
 
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -48,6 +49,8 @@ const App = () => {
               <Route exact path='/func02' component={Secret} />
               <Route exact path='/func03' component={Secret} />
               <Route exact path='/func04' component={Secret} />
+
+              <Route exact path='/chatbot' component={Chatbot} />
             </Switch>
         </Router>
       </ThemeProvider>  

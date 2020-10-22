@@ -77,7 +77,7 @@ export default function ResponsiveDrawer(props: Props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['func01', 'func02', 'func03', 'func04'].map((text, index) => (
+        {['chatbot', 'func02', 'func03', 'func04'].map((text, index) => (
           <Link to={text} style={{ textDecoration: 'none', color: 'black' }}>
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
