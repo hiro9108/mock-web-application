@@ -25,7 +25,8 @@
     background: #41B6E6;
     border-radius: 4px;
     color: #fff;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 18px;
     font-weight: 500;
     padding: .5rem;
     margin-right: 1rem;
@@ -33,25 +34,25 @@
     width: auto;
 }
 
-.c-grid__answer {
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    height: 192px;
-}
-
-.p-chat__row {
+/* .ChatStart {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     padding-right: 0 !important;
 }
 
-.p-chat__reverse {
+.ChatEnd {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     padding-right: 0 !important;
+} */
+
+.ChatAnsGrid {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    height: 192px;
 }
 
 .p-question__title {

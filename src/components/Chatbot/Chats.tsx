@@ -8,7 +8,7 @@ import List from '@material-ui/core/List';
 
 
 
-// const useStyles = makeStyles((theme: Theme) =>
+// const useStyles = makeStyles( () =>
 //   createStyles({
 //     root: {
 //       width: '100%',
@@ -25,9 +25,9 @@ const chats = (props: any) => {
     // const classes = useStyles();
 
     return (
-        <List>
+        <List style={{ height: "400px", padding: "0", overflow: "auto" }} id="scrollArea">
             {props.chat.map((element: any, index: any) => (
-                <Chat chat={element.text} />
+                <Chat chat={element} key={index.toString()} />
             ))}
         </List>
     );

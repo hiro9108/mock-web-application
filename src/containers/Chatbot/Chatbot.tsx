@@ -58,6 +58,13 @@ class Chatbot extends Component<any, any> {
         this.selectedHandler(initAnswer, this.state.currentId)
     }
 
+    componentDidUpdate () {
+        const scrollArea = document.getElementById("scrollArea");
+        if (scrollArea) {
+            scrollArea.scrollTop = scrollArea.scrollHeight;
+        }
+    }
+
 
     render () {
         return (

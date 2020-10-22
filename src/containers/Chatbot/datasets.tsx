@@ -1,7 +1,7 @@
 const defaultDataset = {
     "init": {
         answers: [
-            {content: "I have stress for a job", nextId: "job_offer"},
+            {content: "I am looking for a job", nextId: "job_offer"},
             {content: "I cannot go to school", nextId: "consultant"},
             {content: "I want to know how to learn a new subject", nextId: "community"},
             {content: "I check my score for examinations", nextId: "dating"},
@@ -10,71 +10,50 @@ const defaultDataset = {
     },
     "job_offer": {
         answers: [
-            {content: "I want to know how to learn a new subject", nextId: "website"},
-            {content: "I want to know how to learn a new subject", nextId: "webapp"},
-            {content: "I want to know how to learn a new subject", nextId: "automation_tool"},
-            {content: "I want to know how to learn a new subject", nextId: "other_jobs"}
+            {content: "You can check Likdln", nextId: "website"},
+            {content: "You should create a good portfolio", nextId: "website"},
+            {content: "I want to talk to you", nextId: "consultant"},
+            {content: "Nothing", nextId: "consultant"}
         ],
-        question: "What are your problems?",
+        question: "Do you have anything resolved?",
     },
     "website": {
         answers: [
-            {content: "I want to know how to learn a new subject", nextId: "contact"},
-            {content: "I want to know how to learn a new subject", nextId: "init"}
+            {content: "Yes, I want", nextId: "contact"},
+            {content: "Go back to the beginning", nextId: "init"}
         ],
-        question: "What are your problems?",
-    },
-    "webapp": {
-        answers: [
-            {content: "I want to know how to learn a new subject", nextId: "contact"},
-            {content: "I want to know how to learn a new subject", nextId: "init"}
-        ],
-        question: "What are your problems?",
-    },
-    "automation_tool": {
-        answers: [
-            {content: "I want to know how to learn a new subject", nextId: "contact"},
-            {content: "I want to know how to learn a new subject", nextId: "init"}
-        ],
-        question: "What are your problems?",
-    },
-    "other_jobs": {
-        answers: [
-            {content: "I want to know how to learn a new subject", nextId: "contact"},
-            {content: "I want to know how to learn a new subject", nextId: "init"}
-        ],
-        question: "What are your problems?",
+        question: "Do you want to conntact me?",
     },
     "consultant": {
         answers: [
-            {content: "I want to know how to learn a new subject", nextId: "https://google.com"},
-            {content: "I want to know how to learn a new subject", nextId: "community"},
-            {content: "I want to know how to learn a new subject", nextId: "init"}
+            {content: "I am working on", nextId: "https://google.com"},
+            {content: "I am working on", nextId: "community"},
+            {content: "I am working on", nextId: "init"}
         ],
-        question: "What are your problems?",
+        question: "Early!",
     },
     "community": {
         answers: [
-            {content: "I want to know how to learn a new subject", nextId: "community_activity"},
-            {content: "I want to know how to learn a new subject", nextId: "https://google.com"},
-            {content: "I want to know how to learn a new subject", nextId: "init"}
+            {content: "I am working on", nextId: "community_activity"},
+            {content: "I am working on", nextId: "https://google.com"},
+            {content: "I am working on", nextId: "init"}
         ],
-        question: "What are your problems?",
+        question: "Early!!",
     },
     "community_activity": {
         answers: [
-            {content: "I want to know how to learn a new subject", nextId: "https://google.com"},
-            {content: "I want to know how to learn a new subject", nextId: "https://google.com"},
-            {content: "I want to know how to learn a new subject", nextId: "init"}
+            {content: "I am working on", nextId: "https://google.com"},
+            {content: "I am working on", nextId: "https://google.com"},
+            {content: "I am working on", nextId: "init"}
         ],
-        question: "What are your problems?",
+        question: "Early!!!",
     },
     "dating": {
         answers: [
-            {content: "I want to know how to learn a new subject", nextId: "https://google.com"},
-            {content: "I want to know how to learn a new subject", nextId: "init"}
+            {content: "I am working on", nextId: "https://google.com"},
+            {content: "I am working on", nextId: "init"}
         ],
-        question: "What are your problems?",
+        question: "WEarly!!!!",
     },
 }
 

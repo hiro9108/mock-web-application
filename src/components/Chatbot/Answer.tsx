@@ -1,14 +1,11 @@
 import React from 'react';
-
-// import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+// import { makeStyles, createStyles } from '@material-ui/core/styles';
 
-// const useStyles = makeStyles((theme: Theme) =>
+// const useStyles = makeStyles(() =>
 //   createStyles({
-//     root: {
-//       '& > *': {
-//         margin: theme.spacing(1),
-//       },
+//     "Button": {
+//         marginBottom: "8px"
 //     },
 //   }),
 // );
@@ -18,6 +15,7 @@ const answer = (props: any) => {
 
     return (
         <Button
+            style={{ marginBottom: "8px" }} // temporary
             variant="contained"
             color="primary" 
             fullWidth={true}
