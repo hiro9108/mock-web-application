@@ -26,7 +26,9 @@ const chats = (props: any) => {
 
     return (
         <List>
-            <Chat chat={props.chat}/>
+            {props.chat.map((element: any, index: any) => (
+                <Chat chat={element.text} />
+            ))}
         </List>
     );
 };

@@ -17,7 +17,14 @@ const answer = (props: any) => {
     // const classes = useStyles();
 
     return (
-        <Button variant="contained" color="primary" fullWidth={true} >{props.content}</Button>
+        <Button
+            variant="contained"
+            color="primary" 
+            fullWidth={true}
+            onClick={() => props.selected(props.content, props.nextId)}
+        >
+            {props.content}
+        </Button>
     );
 };
 
