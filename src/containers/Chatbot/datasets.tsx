@@ -10,14 +10,14 @@ const defaultDataset = {
     },
     "job_offer": {
         answers: [
-            {content: "You can check Likdln", nextId: "website"},
-            {content: "You should create a good portfolio", nextId: "website"},
+            {content: "Go to Contact", nextId: "contact"},
+            {content: "You should create a good portfolio", nextId: "consultant"},
             {content: "I want to talk to you", nextId: "consultant"},
             {content: "Nothing", nextId: "consultant"}
         ],
         question: "Do you have anything resolved?",
     },
-    "website": {
+    "contact": {
         answers: [
             {content: "Yes, I want", nextId: "consultant"},
             {content: "Go back to the beginning", nextId: "init"}

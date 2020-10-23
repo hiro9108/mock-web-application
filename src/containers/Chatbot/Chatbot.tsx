@@ -5,6 +5,7 @@ import datasets from './datasets';
 
 import Chats from '../../components/Chatbot/Chats';
 import Answers from '../../components/Chatbot/Answers';
+import ContactDialog from '../../components/Chatbot/ContactDialog';
 
 class Chatbot extends Component<any, any> {
     constructor(props: any) {
@@ -16,8 +17,22 @@ class Chatbot extends Component<any, any> {
             datasets: datasets,
             open: false,
         }
+
         this.selectedHandler = this.selectedHandler.bind(this)
+        this.dialogOpenHandler = this.dialogOpenHandler.bind(this)
+        this.dialogCloseHandler = this.dialogCloseHandler.bind(this)
     }
+
+
+    dialogOpenHandler = () => {
+        this.setState({ open: true });
+    };
+    
+
+    dialogCloseHandler = () => {
+        this.setState({ open: false });
+    };
+
 
     nextQuestionHandler = (nextId: any) => {
         this.state.chats.push({
@@ -36,7 +51,12 @@ class Chatbot extends Component<any, any> {
     selectedHandler = (selectedAnswer: any, nextId: any) => {
         switch (true) {
             case (nextId === "init"):
-                this.nextQuestionHandler(nextId);
+                setTimeout(() => (
+                    this.nextQuestionHandler(nextId)
+                ), 500);
+                break;
+            case (nextId === "contact"):
+                this.dialogOpenHandler();
                 break;
             default:
                 this.state.chats.push({
@@ -47,8 +67,10 @@ class Chatbot extends Component<any, any> {
                     chats: this.state.chats
                 });
 
-                this.nextQuestionHandler(nextId);
-                
+                setTimeout(() => (
+                    this.nextQuestionHandler(nextId)
+                ), 500);
+
                 break;
         }
     }
@@ -72,6 +94,7 @@ class Chatbot extends Component<any, any> {
                 <div className={classes.CenterBox}>
                     <Chats chat={this.state.chats} />
                     <Answers contents={this.state.datasets[this.state.currentId]} selected={this.selectedHandler} />
+                    <ContactDialog open={this.state.open} dialogCloseHandler={this.dialogCloseHandler} />
                 </div>
             </div>
         );
