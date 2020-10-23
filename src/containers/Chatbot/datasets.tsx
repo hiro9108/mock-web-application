@@ -19,7 +19,7 @@ const defaultDataset = {
     },
     "website": {
         answers: [
-            {content: "Yes, I want", nextId: "contact"},
+            {content: "Yes, I want", nextId: "consultant"},
             {content: "Go back to the beginning", nextId: "init"}
         ],
         question: "Do you want to conntact me?",
@@ -28,30 +28,30 @@ const defaultDataset = {
         answers: [
             {content: "I am working on", nextId: "https://google.com"},
             {content: "I am working on", nextId: "community"},
-            {content: "I am working on", nextId: "init"}
+            {content: "Go back to the beginning", nextId: "init"}
         ],
         question: "Early!",
     },
     "community": {
         answers: [
-            {content: "I am working on", nextId: "community_activity"},
+            {content: "I am working on test01", nextId: "community_activity"},
             {content: "I am working on", nextId: "https://google.com"},
-            {content: "I am working on", nextId: "init"}
+            {content: "Go back to the beginning", nextId: "init"}
         ],
         question: "Early!!",
     },
     "community_activity": {
         answers: [
+            {content: "I am working on test02", nextId: "dating"},
             {content: "I am working on", nextId: "https://google.com"},
-            {content: "I am working on", nextId: "https://google.com"},
-            {content: "I am working on", nextId: "init"}
+            {content: "Go back to the beginning", nextId: "init"}
         ],
         question: "Early!!!",
     },
     "dating": {
         answers: [
             {content: "I am working on", nextId: "https://google.com"},
-            {content: "I am working on", nextId: "init"}
+            {content: "Go back to the beginning", nextId: "init"}
         ],
         question: "WEarly!!!!",
     },
