@@ -15,6 +15,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Copyright from './UI/Copyright';
 import capture from '../components/assets/MainPage/golang.png';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -152,7 +154,12 @@ export default function Album() {
             </main>
             <footer className={classes.footer}>
                 <Typography variant="h6" align="center" gutterBottom>
-                    (Draft) Connect to SNS
+                    <a target="_blank" href="https://github.com/hiro9108" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+                        <GitHubIcon style={{ fontSize: 40, marginRight: "15px" }}/>
+                    </a>
+                    <a target="_blank" href="https://linkedin.com/in/hiroshiegawa/" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+                        <LinkedInIcon style={{ fontSize: 40 }}/>
+                    </a>
                 </Typography>
                 <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
                     Online Education
