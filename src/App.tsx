@@ -6,8 +6,11 @@ import SignUp from './components/SignUp';
 import Secret from './components/Secret';
 
 import AppPage from './components/AppPage';
-import Chatbot from './containers/Chatbot/Chatbot';
-import Analize from './containers/Analize/Analize';
+import AppPage01 from './components/AppPage01';
+import AppPage02 from './components/AppPage02';
+
+// import Chatbot from './containers/Chatbot/Chatbot';
+// import Analize from './containers/Analize/Analize';
 
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -49,8 +52,8 @@ const App = () => {
               <Route exact path='/func04' component={Secret} />
 
               <Route exact path='/dashboard' component={AppPage} />
-              <Route exact path='/chatbot' component={Chatbot} />
-              <Route exact path='/analize' component={Analize} />
+              <Route exact path='/chatbot' component={AppPage01} />
+              <Route exact path='/analize' component={AppPage02} />
 
               <Route exact path='/signout' component={Main} />
             </Switch>

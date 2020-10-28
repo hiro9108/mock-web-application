@@ -98,27 +98,22 @@ export default function Album() {
                             Education
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Education application on analizing data.<br/>
-                            Help students communicate each other.<br/>
-                            Online x Education x Communication<br/>
+                            Education application on analizing data.
+                            This application help students communicate each other.<br/>
+                            The Concept is Online x Education x Communication
                         </Typography>
                         <div className={classes.heroButtons}>
                             <Grid container spacing={2} justify="center">
                                 <Grid item>
                                     <Link to='#' style={{ textDecoration: 'none' }}>
                                         <Button variant="contained" color="primary">
-                                            Nodejs App
+                                            Golang App
                                         </Button>
                                     </Link>
                                 </Grid>
                                 <Grid item>
                                     <Button variant="outlined" color="primary">
                                         Python App
-                                    </Button>
-                                </Grid>
-                                <Grid item>
-                                    <Button variant="outlined" color="primary">
-                                        Golang App
                                     </Button>
                                 </Grid>
                             </Grid>

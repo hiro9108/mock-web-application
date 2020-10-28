@@ -19,7 +19,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
 // import { Dashboard } from '@material-ui/icons';
 
-import Dashboard from './Dashborad';
+import Chatbot from '../containers/Chatbot/Chatbot';
 
 const drawerWidth = 240;
 
@@ -121,7 +121,7 @@ export default function ResponsiveDrawer(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Your Education
+            Your problems
           </Typography>
         </Toolbar>
       </AppBar>
@@ -158,7 +158,7 @@ export default function ResponsiveDrawer(props: Props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-            <Dashboard />
+            <Chatbot />
       </main>
     </div>
   );
