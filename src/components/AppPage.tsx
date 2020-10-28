@@ -6,16 +6,20 @@ import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
+import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+import ChatIcon from '@material-ui/icons/Chat';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
+// import { Dashboard } from '@material-ui/icons';
+
+import Dashboard from './Dashborad';
 
 const drawerWidth = 240;
 
@@ -77,10 +81,10 @@ export default function ResponsiveDrawer(props: Props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['chatbot', 'func02', 'func03', 'func04'].map((text, index) => (
-          <Link to={text} style={{ textDecoration: 'none', color: 'black' }}>
+        {['Dashboard', 'ChatBot', 'Analize', 'func04'].map((text, index) => (
+          <Link to={text.toLowerCase()} style={{ textDecoration: 'none', color: 'black' }}>
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 !== 0 ? <ChatIcon /> : <PeopleOutlineIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           </Link>
@@ -88,11 +92,13 @@ export default function ResponsiveDrawer(props: Props) {
       </List>
       <Divider />
       <List>
-        {['sub01', 'sub02', 'sub03'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+        {['SignOut'].map((text, index) => (
+          <Link to={text.toLowerCase()} style={{ textDecoration: 'none', color: 'black' }}>
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <ExitToAppIcon /> : null}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>
@@ -115,7 +121,7 @@ export default function ResponsiveDrawer(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            TOP Page
+            Your Experience
           </Typography>
         </Toolbar>
       </AppBar>
@@ -152,12 +158,7 @@ export default function ResponsiveDrawer(props: Props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>
-          App Function.
-        </Typography>
-        <Typography paragraph>
-          Detail.
-        </Typography>
+            <Dashboard />
       </main>
     </div>
   );

@@ -13,8 +13,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-// import Link from '@material-ui/core/Link';
 import Copyright from './UI/Copyright';
+import capture from '../components/assets/MainPage/golang.png';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -95,12 +95,12 @@ export default function Album() {
                 <div className={classes.heroContent}>
                     <Container maxWidth="sm">
                         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                            My Portifolio(Draft)
+                            Education
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            (Draft) I am Full Stack Enginner and looking for a job.
-                            Please refer to my resume and cover letter. Don&apos;t like Java.
-                            Simple is the best for Portfolio Site.
+                            Education application on analizing data.<br/>
+                            Help students communicate each other.<br/>
+                            Online x Education x Communication<br/>
                         </Typography>
                         <div className={classes.heroButtons}>
                             <Grid container spacing={2} justify="center">
@@ -118,7 +118,7 @@ export default function Album() {
                                 </Grid>
                                 <Grid item>
                                     <Button variant="outlined" color="primary">
-                                        Golang App???
+                                        Golang App
                                     </Button>
                                 </Grid>
                             </Grid>
@@ -133,23 +133,20 @@ export default function Album() {
                                 <Card className={classes.card}>
                                     <CardMedia
                                         className={classes.cardMedia}
-                                        image="#"
+                                        image={capture}
                                         title="Image title"
                                     />
                                     <CardContent className={classes.cardContent}>
                                         <Typography gutterBottom variant="h5" component="h2">
-                                            App Function
+                                            Education function
                                         </Typography>
                                         <Typography>
-                                            Node.js App
+                                            Golang App
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
                                         <Button size="small" color="primary">
                                             View
-                                        </Button>
-                                        <Button size="small" color="primary">
-                                            Edit
                                         </Button>
                                     </CardActions>
                                 </Card>
@@ -160,10 +157,10 @@ export default function Album() {
             </main>
             <footer className={classes.footer}>
                 <Typography variant="h6" align="center" gutterBottom>
-                    (Draft) Contact information
+                    (Draft) Connect to SNS
                 </Typography>
                 <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                    Thank you for reading my portofolio!
+                    Online Education
                 </Typography>
                 <Copyright />
             </footer>
