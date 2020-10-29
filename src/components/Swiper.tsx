@@ -1,12 +1,12 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
-import 'swiper/swiper-bundle.min.css';
-// import 'swiper/css/swiper.css'
+import 'swiper/css/swiper.min.css'
 import Header01 from './Header01';
 import Header02 from './Header02';
 import image01 from './assets/MainPage/image01.jpg';
 import image02 from './assets/MainPage/image02.jpg';
 import image03 from './assets/MainPage/image03.jpg';
+
 
 const swiper = () => {
   const params: any = {
@@ -20,9 +20,7 @@ const swiper = () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    spaceBetween: 30,
     loop: true,
-    autoplay: true,
   }
 
   return (
