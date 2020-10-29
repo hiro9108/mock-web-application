@@ -7,7 +7,6 @@ import image01 from './assets/MainPage/image01.jpg';
 import image02 from './assets/MainPage/image02.jpg';
 import image03 from './assets/MainPage/image03.jpg';
 
-// test commit
 
 const swiper = () => {
   const params: any = {
@@ -15,13 +14,17 @@ const swiper = () => {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true,
-      dynamicBullets: true,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
     loop: true,
+    // effect: 'fade',
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false
+    },
   }
 
   return (
