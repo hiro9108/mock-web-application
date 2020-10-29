@@ -18,6 +18,8 @@ import capture from '../components/assets/MainPage/golang.png';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
+import Swiper from '../components/Swiper';
+
 
 const useStyles = makeStyles((theme) => ({
     icon: {
@@ -66,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
 const cards = [1, 2, 3, 4, 5, 6];
 
 
-export default function Album() {
+export default function Main() {
     const classes = useStyles();
 
     return (
@@ -93,35 +95,13 @@ export default function Album() {
                 </Toolbar>
             </AppBar>
             <main>
+                <Swiper />
                 {/* Hero unit */}
-                <div className={classes.heroContent}>
+                {/* <div className={classes.heroContent}>
                     <Container maxWidth="sm">
-                        <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                            Education
-                        </Typography>
-                        <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Education application on analizing data.
-                            This application help students communicate each other.<br/>
-                            The Concept is Online x Education x Communication
-                        </Typography>
-                        <div className={classes.heroButtons}>
-                            <Grid container spacing={2} justify="center">
-                                <Grid item>
-                                    <Link to='#' style={{ textDecoration: 'none' }}>
-                                        <Button variant="contained" color="primary">
-                                            Golang App
-                                        </Button>
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Button variant="outlined" color="primary">
-                                        Python App
-                                    </Button>
-                                </Grid>
-                            </Grid>
-                        </div>
+                        <Swiper />
                     </Container>
-                </div>
+                </div> */}
                 <Container className={classes.cardGrid} maxWidth="md">
                     {/* End hero unit */}
                     <Grid container spacing={4}>
