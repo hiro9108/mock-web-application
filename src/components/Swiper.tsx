@@ -7,6 +7,7 @@ import image01 from './assets/MainPage/image01.jpg';
 import image02 from './assets/MainPage/image02.jpg';
 import image03 from './assets/MainPage/image03.jpg';
 
+// test commit
 
 const swiper = () => {
   const params: any = {
