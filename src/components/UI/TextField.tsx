@@ -9,6 +9,7 @@ const textField = (props: any) => (
     rows={props.rows}
     multiline={props.multiline}
     onChange={props.onChange}
+    variant={props.variant}
     fullWidth
     margin="dense"
   />
