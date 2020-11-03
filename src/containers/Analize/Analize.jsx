@@ -32,7 +32,7 @@ class Analize extends Component {
 
   submitHandler  = event => {
     event.preventDefault();
-    const url = "http://localhost:5000/"
+    const url = "https://analize-app-with-python.herokuapp.com/"
 
     axios.post(url, {
       val: this.state.val
