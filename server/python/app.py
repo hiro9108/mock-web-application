@@ -1,3 +1,4 @@
+# import os
 import pandas as pd
 
 from flask import Flask, request, jsonify
@@ -27,10 +28,15 @@ def predict(predict_value):
     return a * x_c + mean['y']
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app)
+# app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    return "Hello world"
+
+@app.route("/post", methods=["GET", "POST"])
+def post():
     json_data = request.get_json()
     resultOfPredict = predict(int(json_data["val"]))
     print(resultOfPredict)
@@ -38,5 +44,4 @@ def index():
 
 if __name__ == "__main__":
     app.run()
-
-
+    # app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
