@@ -100,7 +100,7 @@ export default function Main() {
                         <Swiper />
                     </Container>
                 </div> */}
-        <Container className={classes.cardGrid} maxWidth="md">
+        <Container className={classes.cardGrid} maxWidth="xl">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
@@ -114,15 +114,15 @@ export default function Main() {
                   <CardContent className={classes.cardContent}>
                       <Typography gutterBottom variant="h5" component="h2">
                           Education function
-                                        </Typography>
+                      </Typography>
                       <Typography>
                           Golang App
-                                        </Typography>
+                      </Typography>
                     </CardContent>
-                  <CardActions>
+                     <CardActions>
                       <Button size="small" color="primary">
                           View
-                                        </Button>
+                      </Button>
                     </CardActions>
                 </Card>
               </Grid>

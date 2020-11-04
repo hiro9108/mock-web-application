@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 // import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import image01 from './assets/MainPage/image01.jpg';
+import image03 from './assets/MainPage/image03.jpg';
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Header02() {
+export default function Header04() {
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.heroContent} style={{ backgroundImage: `url(${image01})`, backgroundSize: '100% 401px' }}>
+      <div className={classes.heroContent} style={{ backgroundImage: `url(${image03})`, backgroundSize: '100% 401px' }}>
         <Container maxWidth="sm">
           <div style={{ height: "289px"}}/>
         </Container>

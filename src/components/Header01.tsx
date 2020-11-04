@@ -35,16 +35,11 @@ export default function Header01() {
           <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
               <Grid item>
-                <Link to="#" style={{ textDecoration: 'none' }}>
+                <Link to="/appPage" style={{ textDecoration: 'none' }}>
                   <Button variant="contained" color="primary">
-                    Golang App
-                                    </Button>
+                    TEST USER
+                  </Button>
                 </Link>
-              </Grid>
-              <Grid item>
-                <Button variant="outlined" color="primary">
-                  Python App
-                </Button>
               </Grid>
             </Grid>
           </div>
