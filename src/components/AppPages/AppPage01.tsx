@@ -16,10 +16,7 @@ import ChatIcon from '@material-ui/icons/Chat';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
-// import { Dashboard } from '@material-ui/icons';
-
-import Analize from '../containers/Analize/Analize';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 
 const drawerWidth = 240;
 
@@ -41,7 +38,8 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      // marginRight: theme.spacing(2),
+      marginLeft: 'auto',
       [theme.breakpoints.up('sm')]: {
         display: 'none',
       },
@@ -69,7 +67,6 @@ interface Props {
 export default function ResponsiveDrawer(props: Props) {
   const { window } = props;
   const classes = useStyles();
-  const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -81,7 +78,7 @@ export default function ResponsiveDrawer(props: Props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['Dashboard', 'ChatBot', 'Analize', 'func04'].map((text, index) => (
+        {['Dashboard', 'Analize', 'MyPage'].map((text, index) => (
           <Link to={text.toLowerCase()} style={{ textDecoration: 'none', color: 'black' }}>
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 !== 0 ? <ChatIcon /> : <PeopleOutlineIcon />}</ListItemIcon>
@@ -111,18 +108,19 @@ export default function ResponsiveDrawer(props: Props) {
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
+          
+          <Typography variant="h6" noWrap>
+            YOUR PAGE
+          </Typography>
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            edge="start"
+            edge="end"
             onClick={handleDrawerToggle}
             className={classes.menuButton}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Your Data
-          </Typography>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -131,7 +129,8 @@ export default function ResponsiveDrawer(props: Props) {
           <Drawer
             container={container}
             variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            // anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            anchor='left'
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
@@ -158,7 +157,7 @@ export default function ResponsiveDrawer(props: Props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-            <Analize />
+            <h1>Repairing MyPage</h1>
       </main>
     </div>
   );

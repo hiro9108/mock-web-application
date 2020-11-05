@@ -32,7 +32,7 @@ app.post('/register', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.redirect('http://localhost:3000/secret');
+      res.redirect('http://localhost:3000/appPage');
     }
   });
 });
@@ -47,12 +47,12 @@ app.post('/login', (req, res) => {
     } else {
       if (foundUser) {
         if (foundUser.password === password) {
-          res.redirect('http://localhost:3000/secret'); // match email and password
+          res.redirect('http://localhost:3000/appPage'); // match email and password
         } else {
-          res.redirect('http://localhost:3000/'); // Not match password
+          res.redirect('http://localhost:3000/signIn'); // Not match password
         }
       } else {
-        res.redirect('http://localhost:3000/'); // Not match email
+        res.redirect('http://localhost:3000/signIn'); // Not match email
       }
     }
   });

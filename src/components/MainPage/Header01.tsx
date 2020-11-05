@@ -16,11 +16,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header01() {
+const Header01 = () => {
   const classes = useStyles();
 
   return (
-    <>
       <div className={classes.heroContent}>
         <Container maxWidth="sm">
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
@@ -45,6 +44,7 @@ export default function Header01() {
           </div>
         </Container>
       </div>
-    </>
   );
-}
+};
+
+export default Header01;

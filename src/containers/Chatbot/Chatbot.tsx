@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-
 import classes from './chatbot.module.css';
 import datasets from './datasets';
-
+import MainAppBar from '../../components/UI/MainAppBar';
+import MainFooter from '../../components/UI/MainFooter';
 import Chats from '../../components/Chatbot/Chats';
 import Answers from '../../components/Chatbot/Answers';
 import ContactDialog from '../../components/Chatbot/ContactDialog';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 class Chatbot extends Component<any, any> {
     constructor(props: any) {
@@ -90,13 +91,18 @@ class Chatbot extends Component<any, any> {
 
     render () {
         return (
+        <>
             <div className={classes.CenterSection}>
+                <CssBaseline /> 
+                <MainAppBar />
                 <div className={classes.CenterBox}>
                     <Chats chat={this.state.chats} />
                     <Answers contents={this.state.datasets[this.state.currentId]} selected={this.selectedHandler} />
                     <ContactDialog open={this.state.open} dialogCloseHandler={this.dialogCloseHandler} />
                 </div>
             </div>
+            <MainFooter />
+        </>
         );
     };
 };

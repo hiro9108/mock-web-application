@@ -5,9 +5,6 @@ import Header01 from './Header01';
 import Header02 from './Header02';
 import Header03 from './Header03';
 import Header04 from './Header04';
-// import image01 from './assets/MainPage/image01.jpg';
-// import image02 from './assets/MainPage/image02.jpg';
-// import image03 from './assets/MainPage/image03.jpg';
 
 const swiper = () => {
   const params: any = {

@@ -17,9 +17,8 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
-// import { Dashboard } from '@material-ui/icons';
 
-import Chatbot from '../containers/Chatbot/Chatbot';
+import Analize from '../../containers/Analize/Analize';
 
 const drawerWidth = 240;
 
@@ -81,7 +80,7 @@ export default function ResponsiveDrawer(props: Props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['Dashboard', 'ChatBot', 'Analize', 'func04'].map((text, index) => (
+        {['Dashboard', 'Analize', 'MyPage'].map((text, index) => (
           <Link to={text.toLowerCase()} style={{ textDecoration: 'none', color: 'black' }}>
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 !== 0 ? <ChatIcon /> : <PeopleOutlineIcon />}</ListItemIcon>
@@ -121,7 +120,7 @@ export default function ResponsiveDrawer(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Your problems
+            YOUR DATA
           </Typography>
         </Toolbar>
       </AppBar>
@@ -158,7 +157,7 @@ export default function ResponsiveDrawer(props: Props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-            <Chatbot />
+            <Analize />
       </main>
     </div>
   );
