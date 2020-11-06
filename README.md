@@ -4,4 +4,5 @@
 
 ## Development Environment
 
-### Web Hosting: Firebase     API Server(Python): Heroku
+### Web Hosting: Firebase
+### API Server(Python): Heroku
