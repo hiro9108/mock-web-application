@@ -1,0 +1,38 @@
+import React from 'react';
+import Analize from '../../containers/Analize/Analize';
+import AppPageBar from '../UI/AppPageBar';
+import { drawerWidth } from '../UI/AppPageBar';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      display: 'flex',
+    },
+    toolbar: theme.mixins.toolbar,
+    drawerPaper: {
+      width: drawerWidth,
+    },
+    content: {
+      flexGrow: 1,
+      padding: theme.spacing(3),
+    },
+  }),
+);
+
+const AppPage = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <AppPageBar title='YOUR DATA' />    
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
+            <Analize />
+      </main>
+    </div>
+  );
+};
+
+export default AppPage;

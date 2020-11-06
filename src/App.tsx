@@ -7,12 +7,12 @@ import Main from './components/MainPage/Main';
 import SignIn from './components/MainPage/SignIn';
 import SignUp from './components/MainPage/SignUp';
 
-import AppPage from './components/AppPages/AppPage';
-import AppPage01 from './components/AppPages/AppPage01';
-import AppPage02 from './components/AppPages/AppPage02';
-
 import Chatbot from './containers/Chatbot/Chatbot';
-// import Analize from './containers/Analize/Analize';
+
+import AppTopPage from './components/AppPages/AppTopPage';
+import AppMyPage from './components/AppPages/AppMyPage';
+import AppAnalizePage from './components/AppPages/AppAnalizePage';
+
 
 const theme = createMuiTheme({
   palette: {
@@ -43,10 +43,10 @@ const App = () => (
           <Route exact path="/signout" component={Main} />
           <Route exact path="/test" component={Chatbot} />
 
-          <Route exact path="/appPage" component={AppPage} />
-          <Route exact path="/dashboard" component={AppPage} />
-          <Route exact path="/mypage" component={AppPage01} />
-          <Route exact path="/analize" component={AppPage02} />
+          <Route exact path="/appPage" component={AppTopPage} />
+          <Route exact path="/dashboard" component={AppTopPage} />
+          <Route exact path="/mypage" component={AppMyPage} />
+          <Route exact path="/analize" component={AppAnalizePage} />
 
         </Switch>
       </Router>

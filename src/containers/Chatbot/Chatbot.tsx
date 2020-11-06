@@ -22,6 +22,7 @@ class Chatbot extends Component<any, any> {
         this.selectedHandler = this.selectedHandler.bind(this)
         this.dialogOpenHandler = this.dialogOpenHandler.bind(this)
         this.dialogCloseHandler = this.dialogCloseHandler.bind(this)
+        this.nextQuestionHandler = this.nextQuestionHandler.bind(this)
     }
 
 
@@ -79,6 +80,8 @@ class Chatbot extends Component<any, any> {
     componentDidMount () {
         const initAnswer = "";
         this.selectedHandler(initAnswer, this.state.currentId)
+
+        window.scrollTo(0, 0)
     }
 
     componentDidUpdate () {

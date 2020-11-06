@@ -75,17 +75,6 @@ const SignIn = () => {
           >
             Sign In
           </Button>
-          <Link to="/appPage" style={{ textDecoration: 'none' }}>
-            <Button
-              type="button"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Test User
-            </Button>
-          </Link>
           <Grid container>
             <Grid item xs>
               <Link to="/">

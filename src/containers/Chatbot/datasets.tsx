@@ -1,59 +1,28 @@
 const defaultDataset = {
     "init": {
         answers: [
-            {content: "I am looking for a job", nextId: "job_offer"},
-            {content: "I cannot go to school", nextId: "consultant"},
-            {content: "I want to know how to learn a new subject", nextId: "community"},
-            {content: "I check my score for examinations", nextId: "dating"},
+            {content: "I am looking for a developer", nextId: "job_offer"},
+            {content: "I want to contact you", nextId: "job_offer"},
+            {content: "I want to know what you can do", nextId: "check"},
+            {content: "I am not sure", nextId: "check"},
         ],
-        question: "What are your problems?",
+        question: "What do you require?",
     },
     "job_offer": {
         answers: [
             {content: "Go to Contact", nextId: "contact"},
-            {content: "You should create a good portfolio", nextId: "consultant"},
-            {content: "I want to talk to you", nextId: "consultant"},
-            {content: "Nothing", nextId: "consultant"}
+            {content: "See the Sorce Code", nextId: "check"},
+            {content: "Check the Linkedln", nextId: "consultant"},
+            {content: "Nothing", nextId: "init"}
         ],
-        question: "Do you have anything resolved?",
+        question: "Do you want to contact me",
     },
-    "contact": {
+    "check": {
         answers: [
-            {content: "Yes, I want", nextId: "consultant"},
-            {content: "Go back to the beginning", nextId: "init"}
+            {content: "Please click the icon below", nextId: "init"},
+            {content: "Go to beginning", nextId: "init"}
         ],
-        question: "Do you want to conntact me?",
-    },
-    "consultant": {
-        answers: [
-            {content: "I am working on", nextId: "https://google.com"},
-            {content: "I am working on", nextId: "community"},
-            {content: "Go back to the beginning", nextId: "init"}
-        ],
-        question: "Early!",
-    },
-    "community": {
-        answers: [
-            {content: "I am working on test01", nextId: "community_activity"},
-            {content: "I am working on", nextId: "https://google.com"},
-            {content: "Go back to the beginning", nextId: "init"}
-        ],
-        question: "Early!!",
-    },
-    "community_activity": {
-        answers: [
-            {content: "I am working on test02", nextId: "dating"},
-            {content: "I am working on", nextId: "https://google.com"},
-            {content: "Go back to the beginning", nextId: "init"}
-        ],
-        question: "Early!!!",
-    },
-    "dating": {
-        answers: [
-            {content: "I am working on", nextId: "https://google.com"},
-            {content: "Go back to the beginning", nextId: "init"}
-        ],
-        question: "WEarly!!!!",
+        question: "Thank you!",
     },
 }
 
