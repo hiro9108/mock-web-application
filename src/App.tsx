@@ -41,7 +41,7 @@ const App = () => (
           <Route exact path="/signIn" component={SignIn} />
           <Route exact path="/signUp" component={SignUp} />
           <Route exact path="/signout" component={Main} />
-          <Route exact path="/test" component={Chatbot} />
+          <Route exact path="/chatbot" component={Chatbot} />
 
           <Route exact path="/appPage" component={AppTopPage} />
           <Route exact path="/dashboard" component={AppTopPage} />

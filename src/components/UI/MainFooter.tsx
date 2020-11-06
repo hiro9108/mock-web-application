@@ -20,7 +20,7 @@ const MainFooter = (props: any) => {
   return (
     <footer className={classes.footer}>
       <Typography variant="h6" align="center" gutterBottom>
-        <Link to='/test' style={{ textDecoration: 'none', color: 'black' }}>
+        <Link to='/chatbot' style={{ textDecoration: 'none', color: 'black' }}>
           <ForumIcon style={{ fontSize: 40, marginRight: '15px' }} />
         </Link>
         <a target="_blank" href="https://github.com/hiro9108" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
